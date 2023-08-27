@@ -36,7 +36,7 @@ function Test() {
             //console.log(value.data);
         }
         getAllQuestions();
-    },[id]);
+    },[id, tab_change]);
 
     // ---------------------------------------------------------
     
@@ -123,7 +123,7 @@ function Test() {
     }
     // ===============================================================================================
     function handleVisibilityChange() {
-        if (document.hidden) {
+        if (document.visibilityState == "hidden") {
             // the page is hidden
             setTabChange(tab_change+1);
             swal("Changed Tab Detected", "Action has been Recorded", "error");
